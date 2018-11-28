@@ -35,6 +35,7 @@ function Navbar() {
     var nav = '<header style="background: ' + this.background + '" id="' + this.el + '" class="' + this.className + '">' +
       ' <div class="nav-content-pc">' +
       '   <span class="nav-logo-pc"><img src="/corsface/assets/navbar/logo.png"/></span>' +
+      '   <span class="nav-logo-pc" style="margin-left:40px"><a href="http://yunshitu.cn/"><img src="/corsface/assets/navbar/yun-logo.png"/></a></span>' +
       '   <ul class="nav-items-pc">' +
       '     <li data-key="0" onclick="window.location.href=\'/corsface/pages/index/index.html?page=0\'"><a href="javascript:;">首页</a></li>' +
       '     <li data-key="1" ><a href="javascript:;">产品</a></li>' +
