@@ -6,13 +6,13 @@
   <meta name="keywords" content="考斯,人脸识别,车辆识别">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>corsface</title>
+  <title>上海考斯信息技术有限公司</title>
   <link rel="stylesheet" href="../../common/styles/reset.css">
   <link rel="stylesheet" href="../../common/styles/common.css">
   <!-- 引入 navbar css样式，必须在本身css样式上部引入 -->
   <link rel="stylesheet/less" href="../../common/js/navbar/index.less">
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  <link rel="stylesheet" href="../../plugins/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
   <link rel="stylesheet/less" href="./index.less">
@@ -21,6 +21,8 @@
   <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
   <script src="../../common/js/rem.js"></script>
   <script src="../../plugins/swiper.js"></script>
+  <script src="../../plugins//particles.js"></script>
+  <script src="../../plugins/stats.js"></script>
   <!-- <script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.js" ></script> -->
 
 </head>
@@ -30,8 +32,16 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="../../assets/index/banner.png" alt="">
-        <div class="banner_img">
+        <!-- <img src="../../assets/index/banner.png" alt=""> -->
+        <div id="particles-js" class="particles"></div>
+        <img class="shoot_out" src="../../assets/index/shoot_out.png" alt="">
+        <img class="shoot_inner" src="../../assets/index/shoot_inner.png" alt="">
+        <img class="banner_title" src="../../assets/index/title.png" alt="">
+        <img class="banner_corsface" src="../../assets/index/corsface.png" alt="">
+
+
+        <!-- <div class="particles"></div> -->
+        <!-- <div class="banner_img">
           <div>
             <img src="../../assets/index/corsface.png" alt="">
             <img src="../../assets/index/title.png" alt="">
@@ -44,7 +54,7 @@
             </div>
             <img class="here" width="100%" src="../../assets/index/tip.png" alt="">
           </div>
-        </div>
+        </div> -->
       </div>
 
     </div>
@@ -64,7 +74,7 @@
         <img class="product_img" src="../../assets/index/pic01.png" alt="">
         <div>
           <p class="row_product_title_wrapper">
-            <a class="row-product-title" href="/corsface/pages/product/singlepawn/index.html?page=1">单兵蹲守系统</a>
+            <a class="row-product-title" href="/pages/product/singlepawn/index.html?page=1">单兵蹲守系统</a>
           </p>
           <p class="product_detail">
             <span>便携、机动布控、快速抓拍、智能 分析</span>
@@ -77,7 +87,7 @@
         <img class="product_img" src="../../assets/index/pic03.png" alt="">
         <div>
           <p class="row_product_title_wrapper">
-            <a class="row-product-title" href="/corsface/pages/product/caridentification/index.html?page=1">车辆识别系统</a>
+            <a class="row-product-title" href="/pages/product/caridentification/index.html?page=1">车辆识别系统</a>
           </p>
           <p class="product_detail">
             <span>快速识别车牌、车型、颜色等特征</span>
@@ -90,7 +100,7 @@
         <img class="product_img" src="../../assets/index/pic02.png" alt="">
         <div>
           <p class="row_product_title_wrapper">
-            <a class="row-product-title" href="/corsface/pages/product/videoanalysis/index.html?page=1">视频分析系统</a>
+            <a class="row-product-title" href="/pages/product/videoanalysis/index.html?page=1">视频分析系统</a>
           </p>
           <p class="product_detail">
             <span>支持多类型视频介入、对视频中人 物快速精准定位和识别
@@ -104,7 +114,7 @@
         <img class="product_img" src="../../assets/index/pic04.png" alt="">
         <div>
           <p class="row_product_title_wrapper">
-            <a class="row-product-title" href="/corsface/pages/product/faceidentification/index.html?page=1">人脸识别系统</a>
+            <a class="row-product-title" href="/pages/product/faceidentification/index.html?page=1">人脸识别系统</a>
           </p>
           <p class="product_detail">
             <span>多视频编码、丰富的布控方式、灵活的报警机制 </span>
@@ -208,8 +218,7 @@
   </div>
   <script src="../../plugins/jquery.js"></script>
   <script src="../../plugins/swiper.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+  <script src="../../plugins/bootstrap.min.js"></script>
   <script src="../../common/js/swiper/index.js"></script>
   <!--  headroomjs 控制导航条显示隐藏 -->
   <script type="text/javascript" src="../../plugins/homeroom.js"></script>
@@ -221,45 +230,47 @@
   <script src="../../common/js/main/index.js"></script>
   <script>
     $(document).ready(function () {
-    // $(function(){
-    // window.onload = function () {
+      console.log(particlesJS)
+     
+      // $(function(){
+      // window.onload = function () {
       // setTimeout(function () {
       //   var mySwiper = new InitSwiper();
       //   mySwiper.createSwiper();
       // }, 300);
 
-      var mySwiper =new Swiper('.swiper-container', {
-      direction: 'horizontal',
-      // freeMode : false,
-      loop: true,
-      // loopAdditionalSlides : 1,
-      // loopedSlides: 1,
-      // loopFillGroupWithBlank: true,
-      speed:1500,
-  
-      // 如果需要分页器
-      pagination: {
-        el: '.swiper-pagination',
-      },
-  
-      // 如果需要前进后退按钮
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-  
-      // 如果需要滚动条
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-  
-      // 自动播放
-      autoplay:{
-        delay: 4000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-      }
-    });
+      var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        // freeMode : false,
+        // loop: true,
+        // loopAdditionalSlides : 1,
+        // loopedSlides: 1,
+        // loopFillGroupWithBlank: true,
+        speed: 1500,
+
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+
+        // 自动播放
+        autoplay: {
+          delay: 4000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+        }
+      });
 
       // 加入底部
       getScreen() > 750 ? $('body').append(footer()) : $('body').append(mobileFooter());
@@ -283,33 +294,144 @@
       // iconAndText.appendChild(createIconAndText(iconAndTextArray));
       var a = document.querySelector('.row_product').querySelectorAll('.col-lg-3');
       a[0].addEventListener('click', function () {
-        window.location.href = "/corsface/pages/product/singlepawn/index.html?page=1"
+        window.location.href = "/pages/product/singlepawn/index.html?page=1"
       })
       a[1].addEventListener('click', function () {
-        window.location.href = "/corsface/pages/product/caridentification/index.html?page=1"
+        window.location.href = "/pages/product/caridentification/index.html?page=1"
       })
       a[2].addEventListener('click', function () {
-        window.location.href = "/corsface/pages/product/videoanalysis/index.html?page=1"
+        window.location.href = "/pages/product/videoanalysis/index.html?page=1"
       })
       a[3].addEventListener('click', function () {
-        window.location.href = "/corsface/pages/product/faceidentification/index.html?page=1"
+        window.location.href = "/pages/product/faceidentification/index.html?page=1"
       })
 
-          $(window).resize(function(){
+      $(window).resize(function () {
         $('.img-warp').height($('.img-warp').width() * 180 / 224)
-    })
-    
-    $('.content-item').on('mouseover', function () {
+      })
+
+      $('.content-item').on('mouseover', function () {
         $($(this)[0].children[0].children[0]).addClass('imgActive');
-     
-        
-        $($(this)[0].children[0].children[1]).css({background: 'rgba(0,0,0,.3)'})
+
+
+        $($(this)[0].children[0].children[1]).css({ background: 'rgba(0,0,0,.3)' })
         // $($(this)[0].children[0]).css({background: 'rgba(0,0,0,1)'})
-    })
-    $('.content-item').on('mouseleave', function () {
+      })
+      $('.content-item').on('mouseleave', function () {
         $($(this)[0].children[0].children[0]).removeClass('imgActive');
-        $($(this)[0].children[0].children[1]).css({background: 'rgba(0,0,0,0)'})
-    });
+        $($(this)[0].children[0].children[1]).css({ background: 'rgba(0,0,0,0)' })
+      });
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 20,
+            "density": {
+              "enable": true,
+              "value_area": 500
+            }
+          },
+          "color": {
+            "value": "#f0f8fd"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#fff"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 6,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 50,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 170,
+            "color": "#d6fffe",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": true,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grad"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+
+            "resize": true,
+            "modes": {
+              "bubble": {
+                "size": 1
+              }
+            },
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      });
     })
   </script>
 </body>

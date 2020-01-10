@@ -299,7 +299,7 @@ padding-right: 3px;
   font-size: 15px;
   color: #666666;
   line-height: 20px;
-  width: 270px;
+  width: 100%;
 }
 
 @media(max-width:767px){
@@ -390,5 +390,10 @@ padding-right: 3px;
   .part_icon_text{
     height: 100%;
     padding-bottom: 1rem;
+  }
+}
+@media (max-width: 1280px) and (min-width: 786px){
+  .footer > div{
+    width: 88%;
   }
 }

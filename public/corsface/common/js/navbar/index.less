@@ -128,10 +128,6 @@ body{
     background: #282828;
     z-index: 1000;
     & li{
-        // float: left;
-        // margin-left: 50px;
-        // cursor: pointer;
-        // border-bottom: .02rem solid #333;
         padding-left: .3rem;
         height: .8rem;
         line-height: .8rem;
@@ -216,6 +212,29 @@ body{
           transform: translate(-50%, -50%);
         }
       }
+      #subList-case,#subList-scheme{
+         display: none;
+      }
+      .subItems-mb{
+          background: #000;
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        // padding-left: 40px;
+         transition: .3s;
+         text-align: center;
+         z-index: 1;
+         color: #cacaca;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+            // background: rgba(51,51,51,0);
+            // font-size: 14px;
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .nav-content-pc{
@@ -232,8 +251,17 @@ body{
 
     /*在992和1199像素之间的屏幕里,这里的样式才生效*/
 }
-@media (min-width: 1200px) {
-    /*在大于1200像素的屏幕里,这里的样式才生效*/
+@media (max-width: 1680px) and (min-width: 768px) {
+    /*在小于1270像素的屏幕里,这里的样式才生效*/
+    .nav-content-pc{
+        margin: 0 auto;
+        height: 100%;
+        width: 90%;
+    }
+    .headroom{
+        height: 60px;
+        line-height: 60px;
+    }
 }
 
 

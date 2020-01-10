@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="keywords" content="考斯,人脸识别,车辆识别">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>corsface</title>
-
-  <link rel="stylesheet" href="../../common/styles/reset.css">
-
-  <!-- 引入 navbar css样式，必须在本身css样式上部引入 -->
-  <link rel="stylesheet/less" href="../../common/js/navbar/index.less">
-  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <link rel="stylesheet/less" href="./index.less">
-  <link rel="stylesheet" href="../../common/styles/common.css">
-  <link href="../../plugins/swiper.min.css" rel="stylesheet">
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-  <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-  <script src="../../common/js/rem.js"></script>
-
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="考斯,人脸识别,车辆识别">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>corsface</title>
+      
+        <link rel="stylesheet" href="../../common/styles/reset.css">
+       
+        <!-- 引入 navbar css样式，必须在本身css样式上部引入 -->
+        <link rel="stylesheet/less" href="../../common/js/navbar/index.less">
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+        <link rel="stylesheet" href="../../plugins/bootstrap.min.css">
+        <link rel="stylesheet/less" href="./index.less">
+        <link rel="stylesheet" href="../../common/styles/common.css">
+        <link href="https://cdn.bootcss.com/Swiper/4.3.0/css/swiper.min.css" rel="stylesheet">
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+        <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+        <script src="../../common/js/rem.js"></script>
+      
+      </head>
 <body>
-
-  <div class="about_banner">
+  
+<div class="about_banner">
     <img class="banner_img1" src="../../assets/about/banner.png" alt="">
     <img class="banner_img2" src="../../assets/about/banner 1.png" alt="">
     <img class="banner_img3" src="../../assets/about/banner 2.png" alt="">
     <img class="banner_img4" src="../../assets/about/banner 3.png" alt="">
     <!-- 防banner塌陷 -->
     <img class="banner_img" src="../../assets/about/banner.png" alt="">
-  </div>
+</div>
 
-  <a name="anchoring"></a>
-  <ul id="myTab" class="nav nav-tabs ">
-    <li class="active pictureMove1">
-      <a href="#contact" data-toggle="tab"> 联系我们</a>
+<a name="anchoring"></a>
+<ul id="myTab" class="nav nav-tabs ">
+	<li class="active pictureMove1"><a href="#contact" data-toggle="tab">	联系我们</a></li>
+	<li class="pictureMove2"><a href="#introduce" data-toggle="tab">公司简介</a></li>
+	<li class="pictureMove3"><a href="#join" data-toggle="tab">加入我们</a></li>
+	<!-- <li class="pictureMove4"><a href="#news" data-toggle="tab">相关新闻</a></li> -->
+
 </ul>
 <div id="myTabContent" class="tab-content">
 	<div class="tab-pane fade in active" id="contact">
@@ -73,76 +73,35 @@
         4、在诸如Detection，Classification，Segmentation，Tracking，Matching等一个或多个领域有较深入研究者优先；<br />
         5、有云平台部署与编程经验者优先。</p>
     </li>
-    <li class="pictureMove2">
-      <a href="#introduce" data-toggle="tab">公司简介</a>
+    <li>
+<span>研发工程师（北京）</span>
+<p>
+    1、计算机相关专业本科以上学历；<br />
+    2、掌握C/C++/Python/Perl等编程语言的一种或多种，扎实的数据结构和算法基础；<br />
+    3、拥有良好的编码习惯、结构清晰、命名规范、逻辑性强、代码冗余率低；<br />
+    4、优秀的分析和解决问题能力，对挑战性问题充满激情。
+</p>
     </li>
-    <li class="pictureMove3">
-      <a href="#join" data-toggle="tab">加入我们</a>
+    <li>
+      <span>AI产品经理（北京）</span>
+      <p>1、研究生以上学历，有CV或ML相关领域的研究背景（发表过论文者优先）；<br />
+          2、学习能力强，可在短期内了解数据处理操作流程，掌握软件工具的使用方法；<br />
+          3、具备良好的逻辑思维能力和判断能力，对数据和产品感兴趣；<br />
+          4、有责任心、善于沟通、抗压能力强；<br />
+          5、有一定的文档撰写能力，有图片标注或产品实习经验者优先考虑。</p>
     </li>
-    <!-- <li class="pictureMove4"><a href="#news" data-toggle="tab">相关新闻</a></li> -->
-
+    <li>
+      <span>软件测试工程师（上海）</span>
+      <p>
+          1、计算机相关专业本科以上学历；<br />
+          2、熟悉Java语言，熟悉WEB页面及接口测试；<br />
+          3、熟悉自动化测试理论方法，具备自动化测试需求分析和设计规划能力；<br />
+          4、具有搭建自动化测试框架经验。
+      </p>
+    </li>
   </ul>
-  <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade in active" id="contact">
-      <img src="../../assets/about/CQ code.png" alt="">
-      <p>
-        <span>联系方式</span>
-        <span>地址：上海市杨浦区国定东路200号公共创业者实训基地3号楼303室</span>
-      </p>
-    </div>
-    <div class="tab-pane fade" id="introduce">
-      <p>
-        <span>智能改变生活</span>
-        <span>
-          上海考斯信息技术有限公司，是一家专注于及三级视觉及人工智能领域研究、应用的高科技企业，有着丰富的国家级会议安防工作经验。
-          <br />
-          <br /> 公司利用计算机视觉识别技术及人工智能深度学习方法，依托优秀的、高素质的员工队伍，以及具有自主知识产权的核心技术，为公安、交通、边检、金融、酒店、街道等众多领域及企事业单位提供专业应用服务。
-          <br />
-          <br /> 考斯东台人脸识别系统产品及解决方案，采用人工智能深度学习技术，在国际上首次实现了大规模实时时序比对算法，拥有自主知识产权，在动态视频人脸识别、车辆识别等应用领域都有成熟的解决方案及众多成功案例。针对公安行业和平安城市的建设具有广泛的应用前景。
-        </span>
-      </p>
-    </div>
-    <div class="tab-pane fade" id="join">
-      <ul>
-        <li>
-          <span>算法工程师（北京）</span>
-          <p>1、研究生以上学历，有CV或ML相关领域的研究背景（发表过论文者优先）；
-            <br /> 2、有良好的计算机基础和逻辑分析能力，熟悉Linux系统，C++/Python，常用数据结构和算法；
-            <br /> 3、时序DL基本原理和模型，熟练使用至少一种DL框架（如Caffe，MXNet，Tensorflow，Torch等）；
-            <br /> 4、在诸如Detection，Classification，Segmentation，Tracking，Matching等一个或多个领域有较深入研究者优先；
-            <br /> 5、有云平台部署与编程经验者优先。
-          </p>
-        </li>
-        <li>
-          <span>研发工程师（北京）</span>
-          <p>
-            1、计算机相关专业本科以上学历；
-            <br /> 2、掌握C/C++/Python/Perl等编程语言的一种或多种，扎实的数据结构和算法基础；
-            <br /> 3、拥有良好的编码习惯、结构清晰、命名规范、逻辑性强、代码冗余率低；
-            <br /> 4、优秀的分析和解决问题能力，对挑战性问题充满激情。
-          </p>
-        </li>
-        <li>
-          <span>AI产品经理（北京）</span>
-          <p>1、研究生以上学历，有CV或ML相关领域的研究背景（发表过论文者优先）；
-            <br /> 2、学习能力强，可在短期内了解数据处理操作流程，掌握软件工具的使用方法；
-            <br /> 3、具备良好的逻辑思维能力和判断能力，对数据和产品感兴趣；
-            <br /> 4、有责任心、善于沟通、抗压能力强；
-            <br /> 5、有一定的文档撰写能力，有图片标注或产品实习经验者优先考虑。
-          </p>
-        </li>
-        <li>
-          <span>软件测试工程师（上海）</span>
-          <p>
-            1、计算机相关专业本科以上学历；
-            <br /> 2、熟悉Java语言，熟悉WEB页面及接口测试；
-            <br /> 3、熟悉自动化测试理论方法，具备自动化测试需求分析和设计规划能力；
-            <br /> 4、具有搭建自动化测试框架经验。
-          </p>
-        </li>
-      </ul>
-    </div>
-    <!-- <div class="tab-pane fade" id="news">
+	</div>
+	<!-- <div class="tab-pane fade" id="news">
 		<ul>
             <li>
                     <img src="../../assets/about/01.png" alt="">
@@ -174,12 +133,12 @@
             </li>
         </ul>
 	</div> -->
-  </div>
-  <script type="text/javascript" src="../../plugins/jquery.js"></script>
-  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <script src="../../plugins/swiper.js"></script>
-  <script src="../../common/js/swiper/index.js"></script>
+</div>
+<script type="text/javascript" src="../../plugins/jquery.js"></script>
+<script src="../../plugins/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.js"></script>
+<script src="../../common/js/swiper/index.js"></script>
   <!--  headroomjs 控制导航条显示隐藏 -->
   <script type="text/javascript" src="../../plugins/homeroom.js"></script>
   <script type="text/javascript" src="../../plugins/jquery.homeroom.js"></script>
@@ -188,49 +147,48 @@
   <script src="../../plugins/less.js" type="text/javascript"></script>
   <script src="../../common/js/main/index.js"></script>
   <script>
-    $(document).ready(function () {
-      var mySwiper = new InitSwiper();
-      mySwiper.createSwiper();
-      getScreen() > 750 ? $('body').append(footer()) : $('body').append(mobileFooter());
-      var navbar = new Navbar();
-      // console.log(navbar)
-      navbar.init('nav', null, '#282828');
+      $(document).ready(function(){
+        var mySwiper =new InitSwiper();
+          mySwiper.createSwiper();
+          getScreen()>750?  $('body').append(footer()): $('body').append(mobileFooter());
+          var navbar = new Navbar();
+          // console.log(navbar)
+          navbar.init('nav',null,'#282828');
 
-      var img1 = document.querySelector('.banner_img1');
-      var img2 = document.querySelector('.banner_img2');
-      var img3 = document.querySelector('.banner_img3');
-      var img4 = document.querySelector('.banner_img4');
-      var contact = document.querySelector('.pictureMove1');
-      var introduce = document.querySelector('.pictureMove2')
-      var join = document.querySelector('.pictureMove3')
-      var news = document.querySelector('.pictureMove4')
-      contact.addEventListener('click', function () {
-        img1.style.zIndex = 10;
-        img2.style.zIndex = 1;
-        img3.style.zIndex = 2;
-        img4.style.zIndex = 3;
-      });
-      introduce.addEventListener('click', function () {
-        img1.style.zIndex = 1;
-        img2.style.zIndex = 10;
-        img3.style.zIndex = 2;
-        img4.style.zIndex = 3;
-      });
-      join.addEventListener('click', function () {
-        img1.style.zIndex = 1;
-        img2.style.zIndex = 2;
-        img3.style.zIndex = 10;
-        img4.style.zIndex = 3;
-      });
-      //  news.addEventListener('click',function(){
-      //   img1.style.zIndex =1;
-      //   img2.style.zIndex=3;
-      //   img3.style.zIndex=2;
-      //   img4.style.zIndex=10;
-      //  });
+          var img1 =document.querySelector('.banner_img1');
+          var img2 =document.querySelector('.banner_img2');
+          var img3 =document.querySelector('.banner_img3');
+          var img4 =document.querySelector('.banner_img4');
+          var contact =document.querySelector('.pictureMove1');
+          var introduce=document.querySelector('.pictureMove2')
+          var join=document.querySelector('.pictureMove3')
+          var news=document.querySelector('.pictureMove4')
+          contact.addEventListener('click',function(){
+            img1.style.zIndex =10;
+            img2.style.zIndex=1;
+            img3.style.zIndex=2;
+            img4.style.zIndex=3;
+          });
+           introduce.addEventListener('click',function(){
+            img1.style.zIndex =1;
+            img2.style.zIndex=10;
+            img3.style.zIndex=2;
+            img4.style.zIndex=3;
+           })  ;
+            join.addEventListener('click',function(){
+            img1.style.zIndex =1;
+            img2.style.zIndex=2;
+            img3.style.zIndex=10;
+            img4.style.zIndex=3;
+           });
+          //  news.addEventListener('click',function(){
+          //   img1.style.zIndex =1;
+          //   img2.style.zIndex=3;
+          //   img3.style.zIndex=2;
+          //   img4.style.zIndex=10;
+          //  });
 
-    })
-  </script>
+      })
+      </script>
 </body>
-
 </html>

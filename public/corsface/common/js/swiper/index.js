@@ -5,7 +5,7 @@ function InitSwiper(){
      var mySwiper =new Swiper('.swiper-container', {
       direction: 'horizontal',
       // freeMode : false,
-      loop: true,
+      // loop: true,
       // loopAdditionalSlides : 1,
       // loopedSlides: 1,
       loopFillGroupWithBlank: true,

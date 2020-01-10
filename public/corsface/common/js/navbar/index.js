@@ -34,15 +34,16 @@ function Navbar() {
   this.createDom = function () {
     var nav = '<header style="background: ' + this.background + '" id="' + this.el + '" class="' + this.className + '">' +
       ' <div class="nav-content-pc">' +
-      '   <span class="nav-logo-pc"><img src="/corsface/assets/navbar/logo.png"/></span>' +
-      '   <span class="nav-logo-pc" style="margin-left:40px"><a href="http://yunshitu.cn/"><img src="/corsface/assets/navbar/yun-logo.png"/></a></span>' +
+      '   <span class="nav-logo-pc"><img src="/assets/navbar/logo.png"/></span>' +
+      '   <span class="nav-logo-pc" style="margin-left:40px"><a href="http://www.yunshitu.cn/"><img src="/assets/navbar/yun-logo.png"/></a></span>' +
       '   <ul class="nav-items-pc">' +
-      '     <li data-key="0" onclick="window.location.href=\'/corsface/pages/index/index.html?page=0\'"><a href="javascript:;">首页</a></li>' +
+      '     <li data-key="0" onclick="window.location.href=\'/pages/index/index.html?page=0\'"><a href="javascript:;">首页</a></li>' +
       '     <li data-key="1" ><a href="javascript:;">产品</a></li>' +
       // '     <li><a href="/pages/skill/index.html?page=2">技术</a></li>' +
       '     <li data-key="2"><a href="javascript:;">方案</a></li>' +
-      '     <li data-key="3" onclick="window.location.href=\'/corsface/pages/case/index.html?page=3\'"><a href="javascript:;">案例</a></li>' +
-      '     <li data-key="4" onclick="window.location.href=\'/corsface/pages/about/index.html?page=4\'"><a href="javascript:;">关于</a></li>' +
+      '     <li data-key="3" onclick="window.location.href=\'/pages/case/index.html?page=3\'"><a href="javascript:;">案例</a></li>' +
+      '     <li data-key="4" onclick="window.location.href=\'/pages/about/index.html?page=4\'"><a href="javascript:;">关于</a></li>' +
+      '     <li><a href="http://www.yunshitu.cn/">云识图</a></li>'+
       '   </ul>' +
       ' </div>' +
       '</header>' +
@@ -53,18 +54,19 @@ function Navbar() {
       '     <em></em>' +
       '     <em></em>' +
       '   </div>' +
-      '   <span class="nav-logo-mb"><img src="/corsface/assets/navbar/logo.png"/></span>' +
+      '   <span class="nav-logo-mb"><img src="/assets/navbar/logo.png"/></span>' +
+
       '  </div>' +
       '</header>' +
       '   <ul id="nav-mobile-list" class="nav-items-md">' +
-      '     <li><a href="/corsface/pages/index/index.html?page=0">首页</a></li>' +
-      '     <li><a href="/corsface/pages/product/faceidentification/index.html?page=1">产品</a></li>' +
+      '     <li><a href="/pages/index/index.html?page=0">首页</a></li>' +
+      '     <li id="nav-case-mb"><a>产品</a></li>' +
       // '     <ul></ul>'+
       // '     <li><a href="/pages/skill/index.html?page=2">技术</a></li>' +
-      '     <li><a href="/corsface/pages/scheme/index.html?page=2&type=0">方案</a></li>' +
-      '     <ul><li>ewew</li></ul>' +
-      '     <li><a href="/corsface/pages/case/index.html?page=3">案例</a></li>' +
-      '     <li><a href="/corsface/pages/about/index.html?page=4">关于</a></li>' +
+      '     <li id="nav-scheme-mb"><a>方案</a></li>' +
+      '     <li><a href="/pages/case/index.html?page=3">案例</a></li>' +
+      '     <li><a href="/pages/about/index.html?page=4">关于</a></li>' +
+      '     <li><a href="http://www.yunshitu.cn/">云识图</a></li>'+
       '   </ul>'
     $('body').prepend(nav);
     var navPcItems = document.querySelectorAll('.nav-items-pc li');
@@ -95,6 +97,65 @@ function Navbar() {
       var key = $(this).attr('data-key');
       $('#subList').remove();
       $('.arrow').remove();
+    })
+
+    $("#nav-case-mb").click(function(event){
+      //点击导航，切换subnav显示状态
+      if(document.getElementById('subList-case')){
+        console.log($('#subList-case'))
+        $('#subList-case').remove();
+        
+        return;
+      }
+      if($('#subList-scheme')){
+        $("#subList-scheme").remove();
+      }
+      var list = document.createElement('ul');
+      $(list).attr('id', 'subList-case');
+      
+      var subLists = ['单兵蹲守系统', '车辆识别系统', '视频分析系统', '人脸识别系统'];
+      var fileName = ['singlepawn', 'caridentification', 'videoanalysis', 'faceidentification']
+      for (var i = 0; i < subLists.length; i++) {
+        var liNode = document.createElement('a');
+        // var aNode = document.createElement('a');
+        $(liNode).attr('href', '/pages/product/' + fileName[i] + '/index.html?page=1')
+        liNode.innerHTML = subLists[i];
+        $(liNode).addClass('subItems-mb');
+        // $(liNode).append(aNode);
+        list.appendChild(liNode);
+      }
+      console.log('.............')
+      
+      $(this).after(list);
+      $('#subList-case').slideDown();
+    })
+    $("#nav-scheme-mb").click(function(event){
+      if(document.getElementById('subList-scheme')){
+        console.log(',.,.,.')
+        $('#subList-scheme').remove()
+        return;
+      }
+      if($('#subList-case')){
+        $("#subList-case").remove();
+      }
+      //点击导航，切换subnav显示状态
+      var list = document.createElement('div');
+      $(list).attr('id', 'subList-scheme');
+      var subLists = ['重大会议保障系统', '蹲守布控系统', '封闭场所布控', '网格化布控系统', '多级连网布控系统', '全方位布控系统', '人脸识别门禁系统', '移动端人脸识别系统', '动态车辆识别系统', '视频文件人脸检索系统'];
+      var fileName = ['singlepawn', 'caridentification', 'videoanalysis', 'faceidentification']
+      for (var i = 0; i < subLists.length; i++) {
+        var liNode = document.createElement('a');
+        // var aNode = document.createElement('a');
+        $(liNode).attr('href', '/pages/scheme/index.html?page=2&type=' + i)
+        liNode.innerHTML = subLists[i];
+        $(liNode).addClass('subItems-mb');
+        // $(liNode).append(aNode);
+        list.appendChild(liNode);
+      }
+      console.log('.............')
+      
+      $(this).after(list);
+      $('#subList-scheme').slideDown();
     })
 
   };
@@ -164,7 +225,7 @@ function createSubList(key) {
       for (var i = 0; i < subLists.length; i++) {
         var liNode = document.createElement('a');
         // var aNode = document.createElement('a');
-        $(liNode).attr('href', '/corsface/pages/product/' + fileName[i] + '/index.html?page=1')
+        $(liNode).attr('href', '/pages/product/' + fileName[i] + '/index.html?page=1')
         liNode.innerHTML = subLists[i];
         $(liNode).addClass('subItems');
         // $(liNode).append(aNode);
@@ -178,7 +239,7 @@ function createSubList(key) {
         var liNode = document.createElement('a');
         // var aNode = document.createElement('a');
         $(liNode).addClass('col-lg-6')
-        $(liNode).attr('href', '/corsface/pages/scheme/index.html?page=2&type=' + i)
+        $(liNode).attr('href', '/pages/scheme/index.html?page=2&type=' + i)
         liNode.innerHTML = subLists[i];
         $(liNode).addClass('subItems');
         // $(liNode).append(aNode);
@@ -196,5 +257,5 @@ function createSubList(key) {
 //   var key = $(this).attr('data-key');
 //   console.log(key)
 //   // switch ()
-//   // window.location.href=\'/corsface/pages/index/index.html?page=0\'
+//   // window.location.href=\'/pages/index/index.html?page=0\'
 // })

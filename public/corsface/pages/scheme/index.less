@@ -20,7 +20,6 @@ body{
     padding-bottom: 150px;
 }
 .introduce{
-       
         background: #fff;
     & .content{
         position: relative;
@@ -31,6 +30,10 @@ body{
        margin-bottom:100px;
     }
 }
+.introduce_text{
+    display: none
+}
+
 .animes{
     display: flex;
     justify-content: space-between;
@@ -91,7 +94,7 @@ body{
     text-align: center;
     & img{
         // width: 2.5rem;
-        width: 100%;
+        // width: 100%;
     }
     & p{
         margin-top: 18px;
@@ -168,11 +171,31 @@ body{
   color: #CACACA;
   padding-right: 3px;
   }
-
+  
 @media (max-width: 767px) {
     /*在小于768像素的屏幕里,这里的样式才生效*/
-    // body{
-    //   padding-top: 1rem;
-    // }
-    
+    .animes{
+        display: none;
+    }
+    .introduce_text{
+        display: block;
+        width: 100%;
+        color: rgb(102, 102, 102);
+        padding: 0 .5rem;
+        font-size: .3rem
+    }
+    .title{
+        height: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .introduce{
+        padding-bottom: .5rem;
+    }
+    .colss img {
+        width: 70%;
+    }
+    .introduce, .advantage, .system {
+        padding-bottom: .5rem;
+    }
   }
+ 

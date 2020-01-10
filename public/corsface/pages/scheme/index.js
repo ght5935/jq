@@ -27,6 +27,7 @@ $(document).ready(function () {
                   '该系统以移动端应用程序为载体,部署于智能手机或平板电脑中,系统利用智能设备自带的摄像头,进行动态人脸采集及识别,并实时与存储在智能设备中的人员库进行比对,或与存储在云端服务器中的人员库进行后台比对,核验人员的身份信息,根据核验结果进行相应的后续处理。',
                   '该系统用于大量视频文件对人脸智能检索、精确定位、灵活利用的需求。系统将视频文件中的人脸进行分析识别并分类储存，在建立目标人物后直接与识别分类储存后的人脸进行比对，无需再与原视频文件进行比对。通过业界先进的时序比对方法及深度智能学习机制，不但将业务员人员从繁忙的人工比对中抽离出来，并且大幅度提高了识别的效率和准确率。']
   var pictureArr=[{id:'cssSelector0',imgUrl:"../../assets/scheme/" + (Number(type) + 1) + "/introduce.png",introduce:'<span></span><span>'+ spanText[Number(type)] +'</span>',textContent:'selector0'}]
+  $(".introduce_text").text(spanText[Number(type)]);
   $('.introduce').append(createImgAndIntroduce(pictureArr));
   var animesInit =new AnimesFun();
   animesInit.init();
@@ -107,15 +108,15 @@ $(document).ready(function () {
     case '2':
       system = '<div class="title">应用场景</div>' +
         '<div class="content row">' +
-        '<div class="colss col-lg-4 col-sm-12">' +
-        '   <img src="../../assets/scheme/3/scene01.png" alt="">' +
-        '   <p>清真寺人员出入管理</p>' +
-        '</div>' +
-        '<div class="colss col-lg-4 col-sm-12">' +
+        // '<div class="colss col-lg-4 col-sm-12">' +
+        // '   <img src="../../assets/scheme/3/scene01.png" alt="">' +
+        // '   <p>清真寺人员出入管理</p>' +
+        // '</div>' +
+        '<div class="colss col-lg-6 col-sm-12">' +
         '   <img src="../../assets/scheme/3/scene02.png" alt="">' +
         '   <p>人流聚集区出入管理</p>' +
         '</div>' +
-        '<div class="colss col-lg-4 col-sm-12">' +
+        '<div class="colss col-lg-6 col-sm-12">' +
         '   <img src="../../assets/scheme/3/scene03.png" alt="">' +
         '   <p>社区、学校、党政机关等</p>' +
         '</div>' +
@@ -173,11 +174,11 @@ $(document).ready(function () {
     case '4':
       system = '<div class="title">应用场景</div>' +
         '<div class="content row">' +
-        '<div class="colss col-lg-6 col-sm-12">' +
-        '   <img src="../../assets/scheme/5/scene01.png" alt="">' +
-        '   <p>清真寺人员出入管理</p>' +
-        '</div>' +
-        '<div class="colss col-lg-6 col-sm-12">' +
+        // '<div class="colss col-lg-6 col-sm-12">' +
+        // '   <img src="../../assets/scheme/5/scene01.png" alt="">' +
+        // '   <p>清真寺人员出入管理</p>' +
+        // '</div>' +
+        '<div class="colss col-lg-12 col-sm-12">' +
         '   <img src="../../assets/scheme/5/scene02.png" alt="">' +
         '   <p>看守所、监狱人员管理</p>' +
         '</div>' +
